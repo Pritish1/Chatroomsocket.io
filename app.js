@@ -7,7 +7,7 @@ var app=express();
 
 app.use(express.static(path.join(__dirname, 'public')));
 
-var server=app.listen(4000,function(){
+var server=app.listen(process.env.PORT || 4000,function(){
 	console.log('You are currently listening to port number 4000');
 });
 
